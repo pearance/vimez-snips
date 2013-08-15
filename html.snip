@@ -62,7 +62,33 @@ snippet esc
 
 #}}}
 # Meta Section {{{
+snippet html
+  <!doctype html>
+  <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <html class="no-js" lang="${1}">
+  <!--<![endif]-->
+    <head>
+      <meta charset="utf-8">
+      <meta name="author" content="${2}">
+      <meta name="description" content="${3}">
+
+      <title>${4}</title>
+
+      <link rel="stylesheet" href="${5}">
+
+      <script src="${6}/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+      ${7}
+    </body>
+  </html>
+
 snippet bphead
+abbr  Head section of an h5bp based template.
+alias bpheader
   <!doctype html>
   <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
   <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -90,28 +116,23 @@ snippet bphead
 
       ${7}
 
-snippet html
-  <!doctype html>
-  <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <html class="no-js" lang="${1}">
-  <!--<![endif]-->
-    <head>
-      <meta charset="utf-8">
-      <meta name="author" content="${2}">
-      <meta name="description" content="${3}">
+snippet bpfoot
+abbr  Foot section of an h5bp based template.
+alias bpfooter
+  <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+  <script>window.jQuery || document.write('<script src="bower_components/jquery.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
-      <title>${4}</title>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+	  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	  g.src='//www.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 
-      <link rel="stylesheet" href="${5}">
-
-      <script src="${6}/modernizr/modernizr.js"></script>
-    </head>
-    <body>
-      ${7}
-    </body>
+  </body>
   </html>
 
 snippet doc
