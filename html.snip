@@ -85,6 +85,9 @@ snippet html
       ${7}
     </body>
   </html>
+#-------------------------------------------------------------------------------
+
+
 
 snippet bphead
 abbr  Head section of an h5bp based template.
@@ -115,14 +118,15 @@ alias bpheader
       <![endif]-->
 
       ${7}
+#-------------------------------------------------------------------------------
+
+
 
 snippet bpfoot
 abbr  Foot section of an h5bp based template.
 alias bpfooter
   <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
   <script>window.jQuery || document.write('<script src="bower_components/jquery.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -134,12 +138,21 @@ alias bpfooter
 
   </body>
   </html>
+#-------------------------------------------------------------------------------
+
+
 
 snippet doc
   <!doctype html>
+#-------------------------------------------------------------------------------
+
+
 
 snippet author
   <meta name="author" content="${1}">${2}
+#-------------------------------------------------------------------------------
+
+
 
 snippet description
   <meta name="description" content="${1}">${2}
